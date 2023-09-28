@@ -1,5 +1,4 @@
-FROM openjdk:8-alpine
-WORKDIR /app
-COPY target/my-webapp-1.0-SNAPSHOT.war .
-EXPOSE 8080
+FROM tomcat:9-jre8-alpine
+ADD target/my-webapp-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
+EXPOSE 80
 
